@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0c6268">
+  <meta name="description" content="نسخة رقمية تفاعلية من كتيب الأنسولين: صديقك مش عدوك، للتوعية بمرض السكري وأسرهم.">
+  <title>الأنسولين صديقك مش عدوك | كتيب توعية</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#reader" aria-label="العودة إلى الكتاب">
+      <span class="brand-mark" aria-hidden="true">ع</span>
+      <span><strong>دليل العناية</strong><small>كتيب توعية لمرضى السكري وأسرهم</small></span>
+    </a>
+    <div class="topbar-actions">
+      <span class="edition"><i></i> النسخة الرقمية</span>
+      <button class="icon-button" id="printButton" type="button" title="طباعة الكتيب" aria-label="طباعة الكتيب"><span aria-hidden="true">▤</span></button>
+      <button class="icon-button" id="fullscreenButton" type="button" title="ملء الشاشة" aria-label="عرض بملء الشاشة"><span aria-hidden="true">⛶</span></button>
+    </div>
+  </header>
+
+  <main class="reader" id="reader">
+    <aside class="toc" aria-label="فهرس الكتيب">
+      <div class="toc-heading"><span>داخل الكتيب</span><span class="toc-count">٨ صفحات</span></div>
+      <nav id="pageNav" class="toc-list">
+        <button class="toc-item is-current" type="button" data-page="0"><span class="toc-number">٠</span><span>الغلاف</span></button>
+        <button class="toc-item" type="button" data-page="1"><span class="toc-number">١</span><span>يعني إيه أنسولين؟</span></button>
+        <button class="toc-item" type="button" data-page="2"><span class="toc-number">٢</span><span>أنواع الأنسولين</span></button>
+        <button class="toc-item" type="button" data-page="3"><span class="toc-number">٣</span><span>الأنواع والتركيزات</span></button>
+        <button class="toc-item" type="button" data-page="4"><span class="toc-number">٤</span><span>الجرعات والمتابعة</span></button>
+        <button class="toc-item" type="button" data-page="5"><span class="toc-number">٥</span><span>أماكن الحقن</span></button>
+        <button class="toc-item" type="button" data-page="6"><span class="toc-number">٦</span><span>الحقن والحفظ</span></button>
+        <button class="toc-item" type="button" data-page="7"><span class="toc-number">٧</span><span>الطوارئ وبياناتي</span></button>
+      </nav>
+      <div class="toc-note"><span aria-hidden="true">✦</span><p>اقرأ على مهلك، وانتقل بين الصفحات من الفهرس أو أزرار التنقل.</p></div>
+    </aside>
+
+    <section class="book-area" aria-label="قارئ الكتيب">
+      <div class="reader-meta">
+        <span class="reader-kicker"><span class="live-dot"></span> قراءة مريحة على كل الشاشات</span>
+        <span class="page-counter" id="pageCounter" aria-live="polite">الغلاف · ١ من ٨</span>
+      </div>
+      <div class="progress-track" role="progressbar" aria-label="التقدم في الكتيب" aria-valuemin="1" aria-valuemax="8" aria-valuenow="1" id="progressTrack"><span id="progressFill"></span></div>
+
+      <div class="book-frame" id="bookFrame">
+        <div class="book-spine" aria-hidden="true"></div>
+        <div class="page-stack" id="pageStack" aria-live="polite">
+          <article class="book-page cover-page" data-title="الغلاف">
+            <div class="cover-orbit orbit-one"></div><div class="cover-orbit orbit-two"></div>
+            <div class="cover-content">
+              <div class="cover-eyebrow"><span class="eyebrow-mark">+</span> كتيب توعية لمرضى السكري وأسرهم</div>
+              <p class="cover-edition">دليل مبسّط · الإصدار الرقمي</p>
+              <h1>الأنسولين<br><em>صديقك مش عدوك</em></h1>
+              <p class="cover-deck">كل اللي محتاج تعرفه عن أنواعه في مصر ومواعيده<br class="desktop-only"> وطريقة الحقن الصحيحة.</p>
+              <div class="cover-art" aria-label="رسوم توضيحية لقارورة وحقنة وقلم أنسولين" role="img">
+                <svg viewBox="0 0 610 235" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <ellipse cx="305" cy="201" rx="235" ry="17" fill="#dceeed"/>
+                  <g transform="translate(99 25)">
+                    <rect x="31" y="10" width="69" height="26" rx="7" fill="#0b9296"/><rect x="38" y="31" width="55" height="17" rx="4" fill="#b7deda"/>
+                    <rect x="27" y="46" width="77" height="112" rx="17" fill="#f7ffff" stroke="#8bcac6" stroke-width="5"/><path d="M43 62v79" stroke="#d1eae6" stroke-width="8" stroke-linecap="round"/><rect x="40" y="109" width="52" height="32" rx="5" fill="#e8f5f2"/><path d="M44 116h44M44 124h44" stroke="#aacfc9" stroke-width="3"/>
+                    <text x="65" y="180" text-anchor="middle" font-size="12" fill="#13666b" font-family="Arial">INSULIN</text>
+                  </g>
+                  <g transform="translate(257 21) rotate(8 35 87)">
+                    <rect x="26" y="23" width="20" height="156" rx="5" fill="#eaf5f4" stroke="#3ba7a5" stroke-width="4"/><path d="M28 23h16V2a8 8 0 0 0-16 0z" fill="#ffad66"/><rect x="23" y="175" width="26" height="7" rx="3" fill="#16898e"/><path d="M46 41v114M33 60h10m-10 12h10m-10 12h10m-10 12h10m-10 12h10m-10 12h10m-10 12h10" stroke="#78b9b6" stroke-width="2"/><path d="M36 182v16" stroke="#17898c" stroke-width="3"/>
+                  </g>
+                  <g transform="translate(402 25)">
+                    <rect x="30" y="4" width="28" height="30" rx="8" fill="#ffaf69"/><rect x="23" y="26" width="42" height="142" rx="13" fill="#82ceca" stroke="#238d91" stroke-width="4"/><rect x="31" y="43" width="26" height="67" rx="5" fill="#e5f7f4"/><path d="M44 34v10M38 67h12M38 77h12M38 87h12M38 97h12" stroke="#258f91" stroke-width="2"/><rect x="29" y="118" width="30" height="28" rx="5" fill="#168b8e"/><circle cx="44" cy="132" r="5" fill="#ffb36c"/><rect x="35" y="169" width="18" height="11" rx="4" fill="#0d777c"/>
+                  </g>
+                  <circle cx="87" cy="43" r="6" fill="#ffb05f"/><circle cx="504" cy="32" r="5" fill="#ffb05f"/><path d="M502 65h16M510 57v16" stroke="#f6a24e" stroke-width="3" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="cover-bottom">
+                <div><span class="cover-label">تحت إشراف</span><p>أ.د/ منال عيد · أ.د/ ميرهان مقلد<br>أ.م.د/ مروة زغلول · د/ هبة بهريز</p></div>
+                <div class="cover-stamp"><span>دليل</span><strong>صحي</strong><small>للعائلة</small></div>
+              </div>
+              <div class="cover-topics"><span>الأنواع</span><b>·</b><span>الجرعات</span><b>·</b><span>طريقة الحقن</span><b>·</b><span>الطوارئ</span></div>
+              <p class="cover-footnote">المعلومات هنا للتوعية، ولا تغني عن متابعة الطبيب.</p>
+            </div>
+          </article>
+
+          <article class="book-page" data-title="يعني إيه أنسولين؟" hidden>
+            <div class="page-head"><span class="section-no">١</span><div><p class="eyebrow">الأساسيات</p><h2>يعني إيه أنسولين؟</h2></div><span class="folio">01 / 08</span></div>
+            <p class="lead-copy">هرمون بيفرزه البنكرياس، بيدخّل السكر من الدم للخلايا علشان الجسم يستخدمه كطاقة. لما يقل أو الجسم ما يستجيبش له، السكر بيعلى في الدم وده هو مرض السكري.</p>
+            <div class="need-grid">
+              <div class="section-label"><span class="label-line"></span><h3>مين بيحتاجه؟</h3></div>
+              <div class="need-card"><span class="need-tag">النوع الأول</span><p>من أول يوم ومدى الحياة.</p></div>
+              <div class="need-card"><span class="need-tag">النوع الثاني</span><p>لما الأقراص والنظام الغذائي ما يكفوش أو السكر يكون عالي جداً.</p></div>
+              <div class="need-card"><span class="need-tag">سكر الحمل</span><p>لو النظام الغذائي لوحده ما ضبطش السكر.</p></div>
+            </div>
+            <div class="section-label"><span class="label-line"></span><h3>إشاعات وحقايق</h3><span class="section-caption">خلّي المعلومة الصح أقرب</span></div>
+            <div class="myth-grid">
+              <div class="myth-card"><span class="myth-icon">×</span><div><strong>«الأنسولين آخر مرحلة»</strong><p>علاج آمن، وضبط السكر بدري بيقلل خطر مضاعفات العين والكلى والأعصاب.</p></div></div>
+              <div class="myth-card"><span class="myth-icon">×</span><div><strong>«بيعمل إدمان»</strong><p>ده تعويض لهرمون الجسم محتاجه، مش إدمان.</p></div></div>
+              <div class="myth-card"><span class="myth-icon">×</span><div><strong>«بيبوّظ الكلى والنظر»</strong><p>اللي بيبوّظهم السكر العالي لسنين، مش الأنسولين.</p></div></div>
+              <div class="myth-card"><span class="myth-icon">×</span><div><strong>«الحقنة بتوجع»</strong><p>الإبر الحديثة رفيعة وقصيرة جداً وتقريباً ما بتتحسش.</p></div></div>
+            </div>
+            <section class="targets">
+              <div class="targets-heading"><h3>الأرقام المستهدفة لأغلب البالغين</h3><span>(غير الحوامل)</span></div>
+              <div class="target-grid">
+                <div class="target"><strong>80–130</strong><small>مجم/دل</small><span>صائم وقبل الأكل</span></div>
+                <div class="target"><strong>&lt; 180</strong><small>مجم/دل</small><span>بعد الأكل بساعتين</span></div>
+                <div class="target"><strong>&lt; 7%</strong><small>تقريباً</small><span>السكر التراكمي</span></div>
+              </div>
+              <p class="fine-print">الطبيب ممكن يحدد لك أرقام مختلفة حسب السن والحالة.</p>
+            </section>
+            <div class="page-footer"><span>الأنسولين صديقك مش عدوك</span><span>١</span></div>
+          </article>
+
+          <article class="book-page" data-title="أنواع الأنسولين" hidden>
+            <div class="page-head"><span class="section-no">٢</span><div><p class="eyebrow">اختيارات العلاج</p><h2>أنواع الأنسولين في السوق المصري</h2></div><span class="folio">02 / 08</span></div>
+            <p class="page-intro">الأسماء أمثلة شائعة والتوفر بيتغير. الشرائط بتوضح مدة المفعول بالتقريب، وبتختلف حسب المستحضر والجرعة.</p>
+            <div class="insulin-list">
+              <section class="insulin-type rapid"><div class="type-index">01</div><div class="type-icon" aria-hidden="true"><span class="mini-pen"></span></div><div class="type-content"><div class="type-heading"><h3>سريع جداً <small>(مع الأكل)</small></h3><span class="timing-chip">أسرع بداية</span></div><div class="timebar"><span></span></div><div class="time-labels"><span>٠</span><span>٦</span><span>١٢</span><span>١٨</span><span>٢٤ ساعة</span></div><div class="type-facts"><span>يبدأ خلال <b>10–20 دقيقة</b></span><span>يستمر حوالي <b>3–5 ساعات</b></span></div><p class="brands">نوفورابيد NovoRapid · هيومالوج Humalog · أبيدرا Apidra</p><p class="type-time"><b>الميعاد:</b> قبل الأكل مباشرة</p></div></section>
+              <section class="insulin-type short"><div class="type-index">02</div><div class="type-icon" aria-hidden="true"><span class="mini-vial"><i></i></span></div><div class="type-content"><div class="type-heading"><h3>قصير المفعول <small>(المائي)</small></h3><span class="timing-chip">بداية تدريجية</span></div><div class="timebar"><span></span></div><div class="time-labels"><span>٠</span><span>٦</span><span>١٢</span><span>١٨</span><span>٢٤ ساعة</span></div><div class="type-facts"><span>يبدأ خلال <b>30 دقيقة</b></span><span>يستمر حوالي <b>6–8 ساعات</b></span></div><p class="brands">أكترابيد Actrapid · هيومولين آر Humulin R · إنسولين أجيبت آر</p><p class="type-time"><b>الميعاد:</b> قبل الأكل بحوالي نص ساعة</p></div></section>
+              <section class="insulin-type medium"><div class="type-index">03</div><div class="type-icon" aria-hidden="true"><span class="mini-vial cloudy"><i></i></span></div><div class="type-content"><div class="type-heading"><h3>متوسط المفعول <small>(المعكّر)</small></h3><span class="timing-chip">مفعول متوسط</span></div><div class="timebar"><span></span></div><div class="time-labels"><span>٠</span><span>٦</span><span>١٢</span><span>١٨</span><span>٢٤ ساعة</span></div><div class="type-facts"><span>يبدأ بعد <b>1–2 ساعة</b></span><span>يستمر حوالي <b>12–18 ساعة</b></span></div><p class="brands">إنسولاتارد Insulatard · هيومولين إن Humulin N · إنسولين أجيبت إن</p><p class="type-time"><b>الميعاد:</b> مرة أو مرتين يومياً، ويتقلّب قبل الحقن</p></div></section>
+            </div>
+            <div class="page-footer"><span>المعلومات للتوعية فقط</span><span>٢</span></div>
+          </article>
+
+          <article class="book-page" data-title="الأنواع والتركيزات" hidden>
+            <div class="page-head"><span class="section-no">٣</span><div><p class="eyebrow">تابع · اختيارات العلاج</p><h2>أنواع الأنسولين المتاحة</h2></div><span class="folio">03 / 08</span></div>
+            <div class="insulin-list compact-list">
+              <section class="insulin-type basal"><div class="type-index">04</div><div class="type-icon" aria-hidden="true"><span class="mini-pen tall"></span></div><div class="type-content"><div class="type-heading"><h3>طويل المفعول <small>(القاعدي)</small></h3><span class="timing-chip">مفعول ثابت</span></div><div class="timebar"><span></span></div><div class="time-labels"><span>٠</span><span>٦</span><span>١٢</span><span>١٨</span><span>٢٤ ساعة</span></div><p class="type-facts">يستمر حوالي <b>24 ساعة</b></p><p class="brands">لانتوس Lantus · توجيو Toujeo · ليفيمير Levemir · تريسيبا Tresiba (ممتد جداً: أكتر من يوم)</p><p class="type-time"><b>الميعاد:</b> مرة يومياً في نفس الساعة، وما يتخلطش مع أي نوع</p></div></section>
+              <section class="insulin-type premix"><div class="type-index">05</div><div class="type-icon" aria-hidden="true"><span class="mini-vial mixed"><i></i></span></div><div class="type-content"><div class="type-heading"><h3>المخلوط الجاهز</h3><span class="timing-chip">تركيبات جاهزة</span></div><ul class="mix-list"><li><b>مائي + معكّر:</b> ميكستارد 30 · هيومولين 70/30 · إنسولين أجيبت 70/30 ← قبل الأكل بنص ساعة</li><li><b>سريع + معكّر:</b> هيومالوج ميكس 25 و50 · نوفوميكس 30 ← قبل الأكل مباشرة</li><li><b>سريع + قاعدي طويل:</b> ريزوديج Ryzodeg ← مع الوجبات الرئيسية حسب وصف الطبيب</li></ul></div></section>
+            </div>
+            <div class="section-label"><span class="label-line"></span><h3>الأشكال المتاحة</h3></div>
+            <div class="forms-strip"><div class="form-visual" aria-hidden="true"><span class="form-vial"></span><span class="form-syringe"></span><span class="form-pen"></span></div><ul><li><b>زجاجة (فيال):</b> تتسحب بسرنجة أنسولين.</li><li><b>سرنجة أنسولين:</b> مدرّجة بالوحدات.</li><li><b>قلم جاهز</b> أو قلم بخرطوشة تتغير.</li></ul></div>
+            <div class="alert-card danger"><span class="alert-icon">!</span><div><strong>انتبه للتركيز</strong><p>أغلب الأنسولين في مصر 100 وحدة/مل (U-100)، ويتسحب بسرنجة U-100. لو التركيز مختلف اسأل الصيدلي عن السرنجة المناسبة. توجيو (300 وحدة/مل) يُستخدم بقلمه بس: ممنوع سحبه بسرنجة لأن ده ممكن يسبب جرعة زايدة خطيرة.</p></div></div>
+            <div class="page-footer"><span>أمثلة الأسماء والتوفر قد يتغيران</span><span>٣</span></div>
+          </article>
+
+          <article class="book-page" data-title="الجرعات والمتابعة" hidden>
+            <div class="page-head"><span class="section-no">٤</span><div><p class="eyebrow">خطة العلاج</p><h2>الجرعات: مين بيحددها؟</h2></div><span class="folio">04 / 08</span></div>
+            <div class="alert-card warning prominent"><span class="alert-icon">!</span><div><p><strong>الطبيب بس هو اللي بيحدد جرعة البداية وأي تعديل فيها.</strong> الجرعة بتختلف من شخص لآخر حسب نوع السكري والوزن وقياسات السكر والأكل والحالة الصحية، فما تحسبهاش ولا تغيّرها من نفسك.</p></div></div>
+            <div class="section-label"><span class="label-line"></span><h3>النظم الشائعة</h3></div>
+            <div class="regimen-grid"><div class="regimen"><span class="regimen-mark">١</span><h4>قاعدي فقط</h4><p>حقنة طويل المفعول مرة يومياً مع الأقراص.</p></div><div class="regimen"><span class="regimen-mark">٢</span><h4>مخلوط مرتين</h4><p>قبل الفطار وقبل العشا، بمواعيد أكل ثابتة.</p></div><div class="regimen"><span class="regimen-mark">٣</span><h4>قاعدي + وجبات</h4><p>طويل مرة يومياً + سريع قبل كل وجبة رئيسية.</p></div></div>
+            <div class="section-label"><span class="label-line"></span><h3>قواعد أمان</h3></div>
+            <ul class="safety-list"><li><b>ما تغيّرش الجرعة أو النوع من نفسك،</b> حتى لو الاسمين شبه بعض (هيومولين غير هيومالوج).</li><li><b>مش هتاكل؟</b> ما تاخدش جرعة الوجبة المعتادة من نفسك، واتبع خطة طبيبك (ممكن تحتاج جرعة تصحيح لو السكر عالي). وما توقفش القاعدي.</li><li><b>نسيت جرعة؟</b> ما تاخدش جرعتين مع بعض. قيس واسأل طبيبك.</li><li><b>في رمضان وأيام المرض</b> الجرعات بتتغير: راجع الطبيب.</li><li>الطبيب بيعدّل الجرعة بالتدريج حسب قياساتك، فسجّلها وخدها معاك في كل متابعة.</li></ul>
+            <div class="section-label"><span class="label-line"></span><h3>إمتى أقيس السكر؟ <small>(العدد بيحدده الطبيب)</small></h3></div>
+            <div class="measure-grid"><div><b>الصبح صايم</b><span>أول ما تصحى</span></div><div><b>قبل الوجبات</b><span>قبل حقنة الأكل</span></div><div><b>بعد الأكل</b><span>بساعتين</span></div><div><b>قبل النوم</b><span>ومع أي أعراض هبوط</span></div></div>
+            <div class="symptom-strip"><b>أعراض ارتفاع السكر</b><span>عطش شديد · تبول كتير · جفاف في البق · إرهاق · زغللة في النظر</span></div>
+            <div class="page-footer"><span>سجّل قياساتك وخدها معاك للمتابعة</span><span>٤</span></div>
+          </article>
+
+          <article class="book-page" data-title="أماكن الحقن" hidden>
+            <div class="page-head"><span class="section-no">٥</span><div><p class="eyebrow">الحقن بطريقة آمنة</p><h2>أماكن الحقن</h2></div><span class="folio">05 / 08</span></div>
+            <div class="body-map-card">
+              <svg viewBox="0 0 500 230" role="img" aria-label="رسم توضيحي لمواضع الحقن على الجسم من الأمام والخلف" xmlns="http://www.w3.org/2000/svg">
+                <g fill="#e7e0d4" stroke="#b7a998" stroke-width="3" stroke-linejoin="round">
+                  <circle cx="170" cy="33" r="20"/><path d="M147 58q23-12 46 0l17 58-8 42-6 56h-18l-8-49-8 49h-18l-7-56-8-42z"/><path d="M148 66l-31 45-20 48 12 7 29-43 19-28M193 66l31 45 20 48-12 7-29-43-19-28"/>
+                  <circle cx="329" cy="33" r="20"/><path d="M306 58q23-12 46 0l17 58-8 42-6 56h-18l-8-49-8 49h-18l-7-56-8-42z"/><path d="M307 66l-31 45-20 48 12 7 29-43 19-28M352 66l31 45 20 48-12 7-29-43-19-28"/>
+                </g>
+                <g fill="#118b8e" opacity=".95"><ellipse cx="170" cy="111" rx="19" ry="13"/><ellipse cx="150" cy="154" rx="8" ry="18"/><ellipse cx="190" cy="154" rx="8" ry="18"/><ellipse cx="139" cy="94" rx="8" ry="18"/><ellipse cx="201" cy="94" rx="8" ry="18"/><ellipse cx="329" cy="112" rx="18" ry="12"/><ellipse cx="312" cy="154" rx="8" ry="17"/><ellipse cx="346" cy="154" rx="8" ry="17"/><ellipse cx="298" cy="101" rx="8" ry="16"/><ellipse cx="360" cy="101" rx="8" ry="16"/></g>
+                <text x="170" y="220" text-anchor="middle" font-size="15" fill="#67817f" font-family="Tahoma, Arial">من الأمام</text><text x="329" y="220" text-anchor="middle" font-size="15" fill="#67817f" font-family="Tahoma, Arial">من الخلف</text>
+              </svg>
+              <p>الجسم من قدّام (شمال) ومن ورا (يمين)، والأماكن الملوّنة هي أماكن الحقن.</p>
+            </div>
+            <div class="site-grid"><div class="site-card"><h3>البطن</h3><p>أسرع امتصاص. ابعد عن السُّرة صباعين.</p></div><div class="site-card"><h3>الفخذ</h3><p>من قدام وبرّه، فوق.</p></div><div class="site-card"><h3>الذراع</h3><p>من ورا وبرّه، فوق.</p></div><div class="site-card"><h3>الأرداف</h3><p>الربع العلوي الخارجي.</p></div></div>
+            <div class="absorption-note"><b>سرعة الامتصاص:</b> البطن الأسرع، بعده الذراع، ثم الفخذ والأرداف. اسأل طبيبك عن أنسب مكان لنوع الأنسولين بتاعك.</div>
+            <div class="section-label"><span class="label-line"></span><h3>غيّر المكان كل مرة</h3></div>
+            <ul class="safety-list compact-safety"><li>قسّم المنطقة لنقط متباعدة وغيّر النقطة بانتظام، وابعد صباع على الأقل عن الحقنة اللي قبلها.</li><li>الحقن في نفس النقطة بيعمل تكتلات دهنية (مناطق منفوخة أو ناشفة تحت الجلد) بتخلي امتصاص الأنسولين مش منتظم.</li><li>ما تحقنش في تكتل أو جرح أو التهاب.</li></ul>
+            <div class="two-note-grid"><div class="mini-note"><b>الإبر</b><p>إبرة جديدة كل حقنة. تكرار استخدامها بيوجع ويعمل تكتلات.</p></div><div class="mini-note"><b>القلم</b><p>القلم لشخص واحد بس: ما يتشاركش مع حد حتى لو اتغيرت الإبرة.</p></div></div>
+            <div class="page-footer"><span>بدّل موضع الحقن بانتظام</span><span>٥</span></div>
+          </article>
+
+          <article class="book-page" data-title="الحقن والحفظ" hidden>
+            <div class="page-head"><span class="section-no">٦</span><div><p class="eyebrow">خطوة بخطوة</p><h2>طريقة الحقن بالقلم</h2></div><span class="folio">06 / 08</span></div>
+            <div class="procedure-layout">
+              <div class="procedure-art" aria-hidden="true"><svg viewBox="0 0 180 250" xmlns="http://www.w3.org/2000/svg"><rect x="29" y="182" width="122" height="20" rx="4" fill="#f2c1a5"/><path d="M34 183h112" stroke="#d99672" stroke-width="4"/><g transform="rotate(-18 86 112)"><rect x="72" y="38" width="28" height="112" rx="12" fill="#7ecdc9" stroke="#148b8e" stroke-width="4"/><rect x="77" y="50" width="18" height="38" rx="4" fill="#effaf8"/><path d="M80 62h12M80 72h12" stroke="#279b9c" stroke-width="2"/><rect x="76" y="25" width="20" height="18" rx="5" fill="#ffa962"/><rect x="79" y="148" width="14" height="14" rx="3" fill="#188c90"/></g><path d="M76 126q-20-21-32-6-8 11 7 25l24 22q12 10 23-2l15-19q8-11-3-18-8-4-15 2l-8 9-8-9q-1-2-3-4" fill="#f4c3a7" stroke="#d99e83" stroke-width="3" stroke-linejoin="round"/><path d="M97 112v31" stroke="#129196" stroke-width="4" stroke-linecap="round"/></svg><p>القلم واقف بزاوية قايمة<br>على الجلد</p></div>
+              <ol class="steps-list"><li><span>١</span><p>اغسل إيديك واتأكد من <b>اسم الأنسولين</b> وصلاحيته.</p></li><li><span>٢</span><p>لو معكّر: لفّه بين كفّيك واقلبه فوق وتحت بهدوء حوالي 10 مرات، من غير رج، لحد ما يبقى أبيض متجانس.</p></li><li><span>٣</span><p>ركّب <b>إبرة جديدة</b> وجرّب القلم: لف على وحدتين واضغط لحد ما تشوف نقطة (أو حسب نشرة القلم).</p></li><li><span>٤</span><p>لفّ العدّاد على جرعتك.</p></li><li><span>٥</span><p>دخّل الإبرة كلها بزاوية قايمة (90°) واضغط الزرار للآخر.</p></li><li><span>٦</span><p>عِد لحد 10 (أو حسب نشرة القلم) وبعدين اسحب الإبرة. ما تدعكش المكان.</p></li><li><span>٧</span><p>شيل الإبرة وارميها في علبة مخصصة للأدوات الحادة، أو علبة بلاستيك سميكة بغطا محكم.</p></li></ol>
+            </div>
+            <div class="syringe-note"><b>بالسرنجة:</b> نفس الخطوات بعد سحب الجرعة من الزجاجة وطرد فقاعات الهوا. لو الطبيب سمح بخلط نوعين، اسحب المائي (الرائق) الأول وبعده المعكّر.</div>
+            <div class="section-label storage-heading"><span class="label-line"></span><h2>حفظ الأنسولين</h2></div>
+            <div class="storage-grid"><div class="storage-card"><span class="storage-icon">❄</span><h3>قبل الفتح</h3><p>في التلاجة (2–8°م).<br><b>ممنوع الفريزر.</b></p></div><div class="storage-card"><span class="storage-icon">◷</span><h3>بعد الفتح</h3><p>المدة بتختلف حسب النوع (أغلبها حوالي 4 أسابيع وبعضها أطول): راجع النشرة واكتب تاريخ الفتح. بعيد عن الحر والشمس والعربية.</p></div><div class="storage-card discard"><span class="storage-icon">!</span><h3>ما تستخدموش لو</h3><p>لونه اتغير، فيه كتل، اتجمّد، أو صلاحيته انتهت.</p></div></div>
+            <div class="page-footer"><span>راجع نشرة القلم أو الأنسولين الخاص بك</span><span>٦</span></div>
+          </article>
+
+          <article class="book-page" data-title="الطوارئ وبياناتي" hidden>
+            <div class="page-head"><span class="section-no">٧</span><div><p class="eyebrow">اعرف تتصرف</p><h2>هبوط السكر <small>(أقل من 70)</small></h2></div><span class="folio">07 / 08</span></div>
+            <div class="emergency-grid"><section class="emergency-card"><span class="status-pill">هبوط بسيط · المريض واعي</span><p class="symptom-line">عرق ورعشة · جوع شديد · خفقان · دوخة · زغللة · عصبية</p><h3>التصرف: قاعدة 15 / 15</h3><ol><li>خد 15 جرام سكر سريع: نص كوباية عصير محلّى، أو معلقة كبيرة سكر (حوالي 4 معالق صغيرة) في مية.</li><li>قيس بعد 15 دقيقة وكرّر لو لسه أقل من 70.</li><li>لو الأكل بعيد كُل وجبة خفيفة.</li></ol></section><section class="emergency-card severe"><span class="status-pill">هبوط شديد</span><p class="symptom-line">لخبطة شديدة أو فقد وعي</p><p>ما تحطش أكل ولا شرب في بقه. نيّمه على جنبه واطلب الإسعاف <b>123</b>. لو فيه حقنة جلوكاجون وحد متدرب عليها، تتاخد حسب نشرتها.</p></section></div>
+            <div class="alert-card danger high-sugar"><span class="alert-icon">!</span><div><strong>ارتفاع السكر: روح الطوارئ فوراً لو</strong><p>السكر فوق 300 ومش بينزل أو ترجيع متكرر أو مش قادر تشرب · وجع بطن شديد · صعوبة في التنفس أو ريحة أسيتون في النفَس · نعاس شديد. لو عندك شرائط كيتون قيسها. وفي أيام التعب ما توقفش الأنسولين القاعدي من غير ما تسأل طبيبك، واشرب مية كتير.</p></div></div>
+            <div class="section-label personal-heading"><span class="label-line"></span><h3>بياناتي</h3><span class="section-caption">اطبع الصفحة واملأها بخط إيدك</span></div>
+            <div class="personal-card"><div class="personal-row"><b>الاسم</b><span></span></div><div class="personal-row"><b>نوع الأنسولين</b><span></span></div><div class="personal-row dose-row"><b>الجرعة</b><span>الصبح: ............ &nbsp; الضهر: ............ &nbsp; بالليل: ............</span></div><div class="personal-row"><b>الطبيب وتليفونه</b><span></span></div></div>
+            <div class="hotline-grid"><div><span>الإسعاف</span><b>123</b></div><div><span>الخط الساخن لوزارة الصحة</span><b>105</b></div></div>
+            <p class="medical-note">تنبيه: للتوعية العامة ولا يغني عن استشارة الطبيب أو الصيدلي. أسماء الأدوية وصورها أمثلة للتوضيح فقط.</p>
+            <div class="page-footer"><span>احتفظ ببيانات طبيبك وخطة العلاج معك</span><span>٧</span></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="reader-controls">
+        <button class="nav-button secondary" id="previousButton" type="button"><span aria-hidden="true">→</span><span>السابق</span></button>
+        <div class="control-hint">استخدم الأسهم على الكيبورد للتنقل</div>
+        <button class="nav-button primary" id="nextButton" type="button"><span>التالي</span><span aria-hidden="true">←</span></button>
+      </div>
+      <footer class="site-footer"><span>نسخة رقمية من كتيب «الأنسولين صديقك مش عدوك»</span><span>محتوى توعوي · راجع طبيبك دائماً</span></footer>
+    </section>
+  </main>
+
+  <noscript><p class="noscript-note">لتصفح صفحات الكتيب، فعّل JavaScript في المتصفح.</p></noscript>
+</body>
+</html>
